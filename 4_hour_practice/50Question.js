@@ -188,12 +188,17 @@ const removeDuplicatesFromArr = (arr) => {
   return result;
 };
 
-
 /*
 18. Calculate Factorial
 Problem: Take a number and return its factorial.
 Example: 5 → 120
 */
+
+const calculateFactorial = (num = 0) => {
+  const indexes = Array.from({ length: num }, (_, index) => index + 1);
+  return indexes.reduce((prev, curr) => prev * curr, 1);
+};
+console.log(calculateFactorial(6));
 
 /*
 19. Find Fibonacci Sequence
