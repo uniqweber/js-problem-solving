@@ -198,7 +198,6 @@ const calculateFactorial = (num = 0) => {
   const indexes = Array.from({ length: num }, (_, index) => index + 1);
   return indexes.reduce((prev, curr) => prev * curr, 1);
 };
-console.log(calculateFactorial(6));
 
 /*
 19. Find Fibonacci Sequence
@@ -211,6 +210,12 @@ Example: n = 5 → [0, 1, 1, 2, 3]
 Problem: Take a temperature in Celsius and convert it to Fahrenheit.
 Example: 0°C → 32°F
 */
+
+const celToFahrenheit = (num = 100) => {
+  const Fahrenheit = num * (9 / 5) + 32;
+  return Fahrenheit
+};
+
 
 /*
 21. Convert Fahrenheit to Celsius
