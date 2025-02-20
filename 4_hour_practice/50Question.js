@@ -333,11 +333,16 @@ Problem: Take a string and return it without whitespaces.
 Example: "  hello world  " → "helloworld"
 */
 
+const rmWhiteSpaces = (str = " hello world ") => str.trim().split(" ").join("");
+
 /*
 32. Replace Characters in a String
 Problem: Take a string and replace all occurrences of a character with another.
 Example: "hello", "l", "r" → "herro"
 */
+
+const replaceCharacterStr = (str = "hello", replace, withReplace) => str.split(replace).join(withReplace);
+
 
 /*
 33. Find Unique Characters in a String
