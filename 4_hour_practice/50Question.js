@@ -287,12 +287,13 @@ const generateMultiplicationTable = (num) => {
   return multiplication.join(",");
 };
 
-
 /*
 27. Convert String to Upper Case
 Problem: Take a string and return it in upper case.
 Example: "hello" → "HELLO"
 */
+
+const upperCase = (str = "hello") => str.toUpperCase();
 
 /*
 28. Convert String to Lower Case
@@ -300,11 +301,24 @@ Problem: Take a string and return it in lower case.
 Example: "HELLO" → "hello"
 */
 
+const lowerCase = (str = "HELLO") => str.toLowerCase();
+
 /*
 29. Find the Smallest Number in Array
 Problem: Take an array and return the smallest number.
 Example: [5, 2, 9, 1] → 1
 */
+
+const findSmallElementArr = (arr = []) => {
+  let smallest = arr.length - 1;
+  arr.forEach((el) => {
+    if (smallest > el) {
+      smallest = el;
+    }
+  });
+  return smallest;
+};
+
 
 /*
 30. Calculate Power of a Number
