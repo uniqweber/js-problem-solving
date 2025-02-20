@@ -227,13 +227,18 @@ const fahrenheitToCelsius = (num = 100) => {
   return celsius;
 };
 
-
-
 /*
 22. Calculate Compound Interest
 Problem: Take principal, rate, and time and calculate compound interest.
 Example: P=1000, R=5%, T=2 → CI=102.5
 */
+
+const calculateCompoundInterest = (principalAmount, interestRate, time) => {
+  const comInterest = (principalAmount / 100) * interestRate * time;
+  return comInterest;
+};
+
+
 
 /*
 23. Find GCD of Two Numbers
