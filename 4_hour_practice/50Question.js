@@ -166,6 +166,12 @@ Problem: Take a sentence and return it with each word capitalized.
 Example: "hello world" → "Hello World"
 */
 
+const capitalizedWord = (str = "hello world") =>
+  str
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+
 /*
 17. Remove Duplicates from Array
 Problem: Take an array and return it with duplicates removed.
