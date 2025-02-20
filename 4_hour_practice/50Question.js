@@ -319,12 +319,13 @@ const findSmallElementArr = (arr = []) => {
   return smallest;
 };
 
-
 /*
 30. Calculate Power of a Number
 Problem: Take a base and exponent and return the power.
 Example: 2^3 → 8
 */
+
+const calculatePowerNum = (base, exp) => Math.pow(base, exp);
 
 /*
 31. Remove Whitespaces from a String
