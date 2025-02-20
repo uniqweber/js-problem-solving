@@ -279,6 +279,15 @@ Problem: Take a number and generate its multiplication table.
 Example: 5 → 5, 10, 15, ..., 50
 */
 
+const generateMultiplicationTable = (num) => {
+  let multiplication = [];
+  for (let i = 1; i <= 10; i++) {
+    multiplication.push(num * i);
+  }
+  return multiplication.join(",");
+};
+
+
 /*
 27. Convert String to Upper Case
 Problem: Take a string and return it in upper case.
