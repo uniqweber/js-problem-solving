@@ -144,12 +144,13 @@ const sortStr = (str) =>
     .sort((a, b) => a.localeCompare(b))
     .join("");
 
-
 /*
 14. Sort Words in a Sentence
 Problem: Take a sentence and return it with words sorted alphabetically.
 Example: "the quick brown fox" → "brown fox quick the"
 */
+
+const sortSentence = (sentence = "the quick brown fox") => sentence.split(" ").sort((a, b) => a.localeCompare(b));
 
 /*
 15. Count Words in a Sentence
