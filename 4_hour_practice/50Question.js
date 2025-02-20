@@ -393,12 +393,16 @@ Example: [1, 2, 3, 4] → 10
 
 const sumOfArr = (arr = [1, 2, 3, 4]) => arr.reduce((prev, curr) => prev + curr);
 
-
 /*
 38. Check if Number is Positive or Negative
 Problem: Take a number and determine if it is positive, negative, or zero.
 Example: -5 → Negative
 */
+
+const checkNumberType = (number) => {
+  if (number === 0) return "Zero";
+  return number < 0 ? "Negative" : "Positive";
+};
 
 /*
 39. Generate Random Number
