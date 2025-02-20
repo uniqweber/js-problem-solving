@@ -115,12 +115,23 @@ const rmVowelFromStr = (str = "hello") => {
   return newStr;
 };
 
-
 /*
 12. Remove Consonants from a String
 Problem: Take a string and return it with all consonants removed.
 Example: "hello" → "eo"
 */
+
+const rmConstantFromStr = (str = "hello") => {
+  const vowels = "aeiou";
+  let strWithoutConstant = "";
+  [...str].forEach((char) => {
+    if (vowels.includes(char.toLowerCase())) {
+      strWithoutConstant += char;
+    }
+  });
+  return strWithoutConstant;
+};
+
 
 /*
 13. Sort Characters in Alphabetical Order
