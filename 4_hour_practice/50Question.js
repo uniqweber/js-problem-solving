@@ -367,8 +367,7 @@ Problem: Take a decimal number and convert it to binary.
 Example: 10 → 1010
 */
 
-const convertDecimalToBinary = (decimal = 10) => decimal.toString(2)
-
+const convertDecimalToBinary = (decimal = 10) => decimal.toString(2);
 
 /*
 35. Convert Binary to Decimal
@@ -376,7 +375,7 @@ Problem: Take a binary number and convert it to decimal.
 Example: 1010 → 10
 */
 
-const convertBinaryToDecimal = (binary=1010)=> parseInt(binary,2)
+const convertBinaryToDecimal = (binary = 1010) => parseInt(binary, 2);
 
 /*
 36. Calculate Square Root
@@ -384,14 +383,16 @@ Problem: Take a number and return its square root.
 Example: 16 → 4
 */
 
-const calculateSqrRoot =(num=25) => Math.sqrt(num)
-
+const calculateSqrRoot = (num = 25) => Math.sqrt(num);
 
 /*
 37. Find Sum of Array Elements
 Problem: Take an array and return the sum of its elements.
 Example: [1, 2, 3, 4] → 10
 */
+
+const sumOfArr = (arr = [1, 2, 3, 4]) => arr.reduce((prev, curr) => prev + curr);
+
 
 /*
 38. Check if Number is Positive or Negative
