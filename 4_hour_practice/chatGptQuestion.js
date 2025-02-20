@@ -37,7 +37,7 @@ Problem: একটি স্ট্রিং দেওয়া হবে, এবং
 Example: "hello" → 2 (e, o)
 */
 
-const countVowelInStr = (str = "hello") => {
+const countVowelInStr = (str) => {
   let count = 0;
   const vowels = "aeiou";
   [...str].forEach((char) => vowels.includes(char) && count++);
@@ -45,13 +45,14 @@ const countVowelInStr = (str = "hello") => {
 };
 
 /* Find the Length of a String
-
 Problem: একটি স্ট্রিং দেওয়া হবে, এবং আপনাকে সেটির দৈর্ঘ্য বের করতে হবে।
 Example: "hello" → 5
 */
 
-/* Prime Number Check
+const strLength = (str = "hello") => str.length;
 
+
+/* Prime Number Check
 Problem: একটি সংখ্যা দেওয়া হবে, এবং আপনাকে যাচাই করতে হবে সেটা প্রাইম (যে সংখ্যা শুধুমাত্র ১ এবং নিজের দ্বারা ভাগ হয়) কিনা।
 Example: 7 → True, 8 → False
 */
