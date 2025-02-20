@@ -238,13 +238,20 @@ const calculateCompoundInterest = (principalAmount, interestRate, time) => {
   return comInterest;
 };
 
-
-
 /*
 23. Find GCD of Two Numbers
 Problem: Take two numbers and return their greatest common divisor.
 Example: GCD of 8 and 12 → 4
 */
+
+const findGCD = (a, b) => {
+  while (b !== 0) {
+    let remainder = a % b;
+    a = b;
+    b = remainder;
+  }
+  return a;
+};
 
 /*
 24. Find LCM of Two Numbers
@@ -252,11 +259,19 @@ Problem: Take two numbers and return their least common multiple.
 Example: LCM of 8 and 12 → 24
 */
 
+const findLCM = (a, b) => {
+  return (a * b) / findGCD(a, b);
+};
+
 /*
 25. Check Leap Year
 Problem: Take a year and determine if it is a leap year.
 Example: 2020 → True, 2019 → False
 */
+
+const checkLeapYear = (year) => {
+  return (0 === year % 4 && 0 != year % 100) || 0 === year % 400;
+};
 
 /*
 26. Generate Multiplication Table
