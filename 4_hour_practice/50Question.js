@@ -410,12 +410,25 @@ Problem: Generate a random number within a given range.
 Example: Range 1 to 10 → 7
 */
 
+const generateRandomNum = (num = 1) => Math.ceil(Math.random() * num);
+
 /*
 40. Count Occurrences of a Character in String
 Problem: Take a string and a character, and count its occurrences.
 Example: "hello", "l" → 2
 */
 
+const countGivenCharacter = (str = "hello", character) => {
+  const countChar = {};
+  str.split("").forEach((char) => {
+    countChar[char] = countChar[char] ? countChar[char] + 1 : 1;
+  });
+  if (countChar[character]) {
+    return countChar[character];
+  }
+  return "Character Not Found";
+};
+ 
 /*
 41. Find Intersection of Two Arrays
 Problem: Take two arrays and find their intersection.
