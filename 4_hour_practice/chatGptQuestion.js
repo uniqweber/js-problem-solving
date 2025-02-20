@@ -32,13 +32,17 @@ const sumOfDigits = (digits) => {
   return totalOfDigits;
 };
 
-
-
 /* Count Vowels in a String
-
 Problem: একটি স্ট্রিং দেওয়া হবে, এবং আপনাকে এতে মোট কতটি ভাওয়েল (a, e, i, o, u) আছে সেটা গণনা করতে হবে।
 Example: "hello" → 2 (e, o)
 */
+
+const countVowelInStr = (str = "hello") => {
+  let count = 0;
+  const vowels = "aeiou";
+  [...str].forEach((char) => vowels.includes(char) && count++);
+  return count;
+};
 
 /* Find the Length of a String
 
