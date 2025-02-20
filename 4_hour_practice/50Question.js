@@ -213,15 +213,21 @@ Example: 0°C → 32°F
 
 const celToFahrenheit = (num = 100) => {
   const Fahrenheit = num * (9 / 5) + 32;
-  return Fahrenheit
+  return Fahrenheit;
 };
-
 
 /*
 21. Convert Fahrenheit to Celsius
 Problem: Take a temperature in Fahrenheit and convert it to Celsius.
 Example: 32°F → 0°C
 */
+
+const fahrenheitToCelsius = (num = 100) => {
+  const celsius = (num - 32) * (5 / 9);
+  return celsius;
+};
+
+
 
 /*
 22. Calculate Compound Interest
