@@ -78,9 +78,13 @@ Example: [2, 4, 6, 8] → 5
 
 const findTheAvg = (arr) => arr.reduce((prev, curr) => prev + curr) / arr.length;
 
-
 /* Check Palindrome
-
 Problem: একটি স্ট্রিং দেওয়া হবে, এবং আপনাকে যাচাই করতে হবে সেটি প্যালিনড্রোম (যা উল্টানো হলে নিজেই হয়) কি না।
 Example: "madam" → True, "hello" → False
 */
+
+const checkPalindrome = (str = "") => {
+  const reverseStr = str.split("").reverse().join("");
+  return str === reverseStr;
+};
+
