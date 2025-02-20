@@ -443,6 +443,8 @@ Problem: Take two arrays and find their intersection.
 Example: [1, 2, 3], [2, 3, 4] → [2, 3]
 */
 
+const intersectionOfArrays = (arr=[1, 2, 3], arr2=[2, 3, 4]) => arr.filter((el) => arr2.includes(el));
+
 /*
 42. Find Union of Two Arrays
 Problem: Take two arrays and find their union.
