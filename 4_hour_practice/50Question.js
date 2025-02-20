@@ -132,12 +132,18 @@ const rmConstantFromStr = (str = "hello") => {
   return strWithoutConstant;
 };
 
-
 /*
 13. Sort Characters in Alphabetical Order
 Problem: Take a string and return it with characters sorted alphabetically.
 Example: "hello" → "ehllo"
 */
+
+const sortStr = (str) =>
+  str
+    .split("")
+    .sort((a, b) => a.localeCompare(b))
+    .join("");
+
 
 /*
 14. Sort Words in a Sentence
