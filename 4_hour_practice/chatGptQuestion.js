@@ -51,11 +51,19 @@ Example: "hello" → 5
 
 const strLength = (str = "hello") => str.length;
 
-
 /* Prime Number Check
 Problem: একটি সংখ্যা দেওয়া হবে, এবং আপনাকে যাচাই করতে হবে সেটা প্রাইম (যে সংখ্যা শুধুমাত্র ১ এবং নিজের দ্বারা ভাগ হয়) কিনা।
 Example: 7 → True, 8 → False
 */
+
+const checkPrimeNum = (num) => {
+  let count = 0;
+  for (let i = 1; i <= num; i++) {
+    if (num % i === 0) count++;
+  }
+  return count === 2;
+};
+
 
 /* Reverse a String
 
