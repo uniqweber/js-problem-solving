@@ -12,12 +12,13 @@ Example: 4 → Even, 7 → Odd
 
 const isOddOrEven = (num) => (num % 2 === 0 ? "Even" : "Odd");
 
-
 /* Find the Maximum Number
 
 Problem: একটি অ্যারে দেওয়া হবে এবং আপনাকে তার মধ্যে সবচেয়ে বড় সংখ্যা খুঁজে বের করতে হবে।
 Example: [1, 2, 3, 7, 5] → 7
 */
+
+const findMaxNum = (arr) => Math.max(...arr);
 
 /* Sum of Digits
 
