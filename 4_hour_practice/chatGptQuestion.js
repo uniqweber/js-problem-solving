@@ -66,16 +66,18 @@ const checkPrimeNum = (num) => {
 
 
 /* Reverse a String
-
 Problem: একটি স্ট্রিং দেওয়া হবে, এবং আপনাকে সেটি উল্টে দিতে হবে।
 Example: "hello" → "olleh"
 */
 
-/* Find the Average of Numbers
+const reverseStr = (str = "hello")=> str.split("").reverse().join("");
 
+/* Find the Average of Numbers
 Problem: একটি অ্যারে দেওয়া হবে, এবং আপনাকে তার গড় (average) বের করতে হবে।
 Example: [2, 4, 6, 8] → 5
 */
+
+
 
 /* Check Palindrome
 
