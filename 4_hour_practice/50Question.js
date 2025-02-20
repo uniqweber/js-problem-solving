@@ -205,6 +205,14 @@ Problem: Take a number n and return the first n numbers of the Fibonacci sequenc
 Example: n = 5 → [0, 1, 1, 2, 3]
 */
 
+const findFibonacciSequence = (num) => {
+  let fib = [0, 1];
+  for (let i = 2; i < n; i++) {
+    fib[i] = fib[i - 1] + fib[i - 2];
+  }
+  return fib;
+};
+
 /*
 20. Convert Celsius to Fahrenheit
 Problem: Take a temperature in Celsius and convert it to Fahrenheit.
@@ -428,7 +436,7 @@ const countGivenCharacter = (str = "hello", character) => {
   }
   return "Character Not Found";
 };
- 
+
 /*
 41. Find Intersection of Two Arrays
 Problem: Take two arrays and find their intersection.
