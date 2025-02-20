@@ -361,12 +361,14 @@ const findUniqCharacters = (str = "hello") => {
     .join("");
 };
 
-
 /*
 34. Convert Decimal to Binary
 Problem: Take a decimal number and convert it to binary.
 Example: 10 → 1010
 */
+
+const convertDecimalToBinary = (decimal = 10) => decimal.toString(2)
+
 
 /*
 35. Convert Binary to Decimal
