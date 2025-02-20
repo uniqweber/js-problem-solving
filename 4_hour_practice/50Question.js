@@ -376,11 +376,16 @@ Problem: Take a binary number and convert it to decimal.
 Example: 1010 → 10
 */
 
+const convertBinaryToDecimal = (binary=1010)=> parseInt(binary,2)
+
 /*
 36. Calculate Square Root
 Problem: Take a number and return its square root.
 Example: 16 → 4
 */
+
+const calculateSqrRoot =(num=25) => Math.sqrt(num)
+
 
 /*
 37. Find Sum of Array Elements
