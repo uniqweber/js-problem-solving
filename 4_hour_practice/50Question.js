@@ -178,6 +178,17 @@ Problem: Take an array and return it with duplicates removed.
 Example: [1, 2, 2, 3, 4] → [1, 2, 3, 4]
 */
 
+const removeDuplicatesFromArr = (arr) => {
+  const result = [];
+  arr.forEach((element) => {
+    if (!result.includes(element)) {
+      result.push(element);
+    }
+  });
+  return result;
+};
+
+
 /*
 18. Calculate Factorial
 Problem: Take a number and return its factorial.
