@@ -13,7 +13,6 @@ Example: 4 → Even, 7 → Odd
 const isOddOrEven = (num) => (num % 2 === 0 ? "Even" : "Odd");
 
 /* Find the Maximum Number
-
 Problem: একটি অ্যারে দেওয়া হবে এবং আপনাকে তার মধ্যে সবচেয়ে বড় সংখ্যা খুঁজে বের করতে হবে।
 Example: [1, 2, 3, 7, 5] → 7
 */
@@ -21,10 +20,19 @@ Example: [1, 2, 3, 7, 5] → 7
 const findMaxNum = (arr) => Math.max(...arr);
 
 /* Sum of Digits
-
 Problem: একটি পূর্ণসংখ্যা দেওয়া হবে, এবং আপনাকে তার সব ডিজিট যোগ করতে হবে।
 Example: 123 → 1 + 2 + 3 = 6
 */
+
+const sumOfDigits = (digits) => {
+  const totalOfDigits = digits
+    ?.toString()
+    .split("")
+    .reduce((prev, curr) => Number(prev) + Number(curr));
+  return totalOfDigits;
+};
+
+
 
 /* Count Vowels in a String
 
