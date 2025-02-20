@@ -343,12 +343,24 @@ Example: "hello", "l", "r" → "herro"
 
 const replaceCharacterStr = (str = "hello", replace, withReplace) => str.split(replace).join(withReplace);
 
-
 /*
 33. Find Unique Characters in a String
 Problem: Take a string and return only unique characters.
 Example: "hello" → "heo"
 */
+
+const findUniqCharacters = (str = "hello") => {
+  const uniqCount = {};
+  str.split("").forEach((char) => {
+    uniqCount[char] = uniqCount[char] ? uniqCount[char] + 1 : 1;
+  });
+
+  return str
+    .split("")
+    .filter((char) => uniqCount[char] === 1)
+    .join("");
+};
+
 
 /*
 34. Convert Decimal to Binary
