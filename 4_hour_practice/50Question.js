@@ -158,6 +158,8 @@ Problem: Take a sentence and return the number of words.
 Example: "the quick brown fox" → 4
 */
 
+const countWords = (str = "the quick brown fox") => str.trim().split(" ").length;
+
 /*
 16. Capitalize Each Word
 Problem: Take a sentence and return it with each word capitalized.
