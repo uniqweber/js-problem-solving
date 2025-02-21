@@ -125,10 +125,39 @@ const sortStrWordInReverserAlphaOrder = (str = "amar sonar bangla ami tumay valo
     .sort((a, b) => b.localeCompare(a));
 };
 // 21. Write a JavaScript function that takes a string as an input and returns the number of sentences in the string.
+const sentenceCountInStr = (str = "hello. kemnon acho? ami valo achi. tumi kemon acho?") => {
+  return str.match(/[^.!?]+[.!?]+/g).length;
+};
 // 22. Write a JavaScript function that takes a string as an input and returns the string with all sentences reversed.
+const sentenceReverseInStr = (str = "hello. kemon acho? ami valo achi. tumi kemon acho? ") => {
+  return str
+    .match(/[^.!?]+[.!?]+/g)
+    .map((sentence) => sentence.trim())
+    .reverse()
+    .join(" ");
+};
 // 23. Write a JavaScript function that takes a string as an input and returns the string with all sentences sorted in alphabetical order.
+const sortSenInAlphaOrder = (str = "hello. kemon acho? ami valo achi. tumi kemon acho?") => {
+  return str
+    .trim()
+    .match(/[^.!?]+[.!?]+/g)
+    .map((sen) => sen.trim())
+    .sort((a, b) => a.localeCompare(b))
+    .join(" ");
+};
 // 24. Write a JavaScript function that takes a string as an input and returns the string with all sentences sorted in reverse alphabetical order.
+const sortSenInReverseAlphaOrder = (str = "hello. kemon acho? ami valo achi. tumi kemon acho?") => {
+  return str
+    .trim()
+    .match(/[^.!?]+[.!?]+/g)
+    .map((sen) => sen.trim())
+    .sort((a, b) => b.localeCompare(a))
+    .join(" ");
+};
 // 25. Write a JavaScript function that takes a string as an input and returns the number of paragraphs in the string.
+const countParagraphInStr = (str = "his is the first paragraph.\nThis is the second paragraph. \n") => {
+  return str.split("\n").filter(Boolean).length;
+};
 // 26. Write a JavaScript function that takes a string as an input and returns the string with all paragraphs reversed.
 // 27. Write a JavaScript function that takes a string as an input and returns the string with all paragraphs sorted in alphabetical order.
 // 28. Write a JavaScript function that takes a string as an input and returns the string with all paragraphs sorted in reverse alphabetical order.
