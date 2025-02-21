@@ -459,11 +459,15 @@ Problem: Take two arrays and find their difference.
 Example: [1, 2, 3], [2, 3, 4] → [1]
 */
 
+const findTheDifference = (arr = [1, 2, 3], arr2 = [2, 3, 4]) => arr.filter((el) => !arr2.includes(el));
+
 /*
 44. Check if String Contains Substring
 Problem: Take a string and a substring, and check if the string contains the substring.
 Example: "hello", "ell" → True
 */
+
+const checkSubstring = (str = "hello", findString = "ell") => str.includes(findString);
 
 /*
 45. Replace Substring in String
@@ -471,11 +475,15 @@ Problem: Take a string, a substring to find, and a substring to replace it with.
 Example: "hello world", "world", "there" → "hello there"
 */
 
+const replaceSubstring = (str = "hello world", replaceWith = "world", replaceWord = "there") => str.replace(replaceWith, replaceWord);
+
 /*
 46. Convert Number to String
 Problem: Take a number and convert it to a string.
 Example: 123 → "123"
 */
+
+const numToStr = (num = 123) => num.toString();
 
 /*
 47. Convert String to Number
@@ -483,11 +491,19 @@ Problem: Take a string and convert it to a number.
 Example: "123" → 123
 */
 
+const strToNum = (str = "123") => Number(str);
+
 /*
 48. Find Median of Array
 Problem: Take an array and find its median.
 Example: [1, 3, 2, 4, 5] → 3
 */
+
+function findMedian(arr) {
+  const sortedArr = arr.sort((a, b) => a - b);
+  const mid = Math.floor(sortedArr.length / 2);
+  return sortedArr.length % 2 === 0 ? sortedArr[mid] + sortedArr[mid - 1] / 2 : sortedArr[mid];
+}
 
 /*
 49. Find Mode of Array
