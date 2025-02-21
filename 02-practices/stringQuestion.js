@@ -181,24 +181,72 @@ const sortParagraphStrRevAlphaOrder = (str = "hello baby.\nnew here. \n i am goo
 };
 // 29. Write a JavaScript function that takes a string as an input and returns the string with all white spaces removed.
 const rmWhiteSpacesStr = (str = "hello world") => {
-  // return str.trim().split(' ').join('')
-  return str.replace(" ", "");
+  return str.trim().split(" ").join("");
 };
 // 30. Write a JavaScript function that takes a string as an input and returns the string with all tabs removed.
 const tabsRemoveStr = (str = "hello\tworld") => {
-  // return str.trim().split('\t').map(t=>t.trim()).join(' ')
-  return str.replace("\t", " ");
+  return str
+    .trim()
+    .split("\t")
+    .map((t) => t.trim())
+    .join(" ");
 };
 // 31. Write a JavaScript function that takes a string as an input and returns the string with all new lines removed.
+const rmNewlineStr = (str = "hello baby.\nnew here. \n i am good") => {
+  return str
+    .trim()
+    .split("\n")
+    .map((n) => n.trim())
+    .join(" ");
+};
 // 32. Write a JavaScript function that takes a string as an input and returns the string with all form feeds removed.
+const rmFormFeeds = (str = "Remove\f all\f form\f feeds.") => {
+  return str
+    .trim()
+    .split("\f")
+    .map((n) => n.trim())
+    .join(" ");
+};
 // 33. Write a JavaScript function that takes a string as an input and returns the string with all carriage returns removed.
+const rmCarriage = (str = "Hello\rWorld") => {
+  return str.trim().split("\r").join(" ");
+};
 // 34. Write a JavaScript function that takes a string as an input and returns the string with all backspaces removed.
+const rmBackspaces = (str = "Hello\bWorld") => {
+  return str.trim().split("\b").join(" ");
+};
 // 35. Write a JavaScript function that takes a string as an input and returns the string with all vertical tabs removed.
-// 36. Write a JavaScript function that takes a string as an input and returns the string with all non-printable characters removed.
-// 37. Write a JavaScript function that takes a string as an input and returns the string with all printable characters.
+const rmVerticalTab = (str = "Hello\vWorld") => {
+  return str.trim().split("\v").join(" ");
+};
 // 38. Write a JavaScript function that takes a string as an input and returns the string with all digits removed.
+const rmDigits = (str = "Hello123World") => {
+  const digits = "0123456789";
+  return str
+    .trim()
+    .split("")
+    .filter((char) => !digits.includes(char))
+    .join("");
+};
 // 39. Write a JavaScript function that takes a string as an input and returns the string with all letters removed.
+const rmLetters = (str = "a12%2:afdc") => {
+  const letters = "abcdefghijklmnopqrstuvwxyz";
+  return str
+    .trim()
+    .split("")
+    .filter((char) => !letters.includes(char))
+    .join("");
+};
 // 40. Write a JavaScript function that takes a string as an input and returns the string with all symbols removed.
+const rmAllSymbols = (str = "%*##_(#(&((}hello34&*^(") => {
+  const symbols = `!"#$%&'()*+,-./:;<=>?@[\]^_{|}~`;
+  return str
+    .trim()
+    .split("")
+    .filter((sym) => !symbols.includes(sym))
+    .join("");
+};
+
 // 41. Write a JavaScript function that takes a string as an input and returns the string with all punctuation removed.
 // 42. Write a JavaScript function that takes a string as an input and returns the string with all whitespace characters removed.
 // 43. Write a JavaScript function that takes a string as an input and returns the string with all non-alphanumeric characters removed.
