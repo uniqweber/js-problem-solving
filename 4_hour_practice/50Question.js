@@ -511,8 +511,30 @@ Problem: Take an array and find its mode (most frequent element).
 Example: [1, 3, 3, 2, 4, 5] → 3
 */
 
+const findMode = (numbers = [1, 3, 3, 2, 2, 4, 5]) => {
+  const counts = {};
+  let maxCount = 0;
+  let mostFrequentNumber = [];
+
+  numbers.forEach((number) => {
+    counts[number] = (counts[number] || 0) + 1;
+    maxCount = Math.max(maxCount, counts[number]);
+  });
+
+  for (const key in counts) {
+    if (counts[key] === maxCount) {
+      mostFrequentNumber.push(key);
+    }
+  }
+
+  return mostFrequentNumber.join(",");
+};
+
 /*
 50. Check if Array is Sorted
 Problem: Take an array and determine if it is sorted in ascending order.
 Example: [1, 2, 3, 4] → True, [3, 2, 1] → False
 */
+const checkArrIsSorted = (arr = [1, 2, 3, 4]) => {
+
+};
