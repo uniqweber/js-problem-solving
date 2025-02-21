@@ -155,14 +155,40 @@ const sortSenInReverseAlphaOrder = (str = "hello. kemon acho? ami valo achi. tum
     .join(" ");
 };
 // 25. Write a JavaScript function that takes a string as an input and returns the number of paragraphs in the string.
-const countParagraphInStr = (str = "his is the first paragraph.\nThis is the second paragraph. \n") => {
+const countParagraphInStr = (str = "this is the first paragraph.\nThis is the second paragraph. \n") => {
   return str.split("\n").filter(Boolean).length;
 };
 // 26. Write a JavaScript function that takes a string as an input and returns the string with all paragraphs reversed.
+const reverseParagraphInStr = (str = "this is the first paragraph.\nThis is the second paragraph.") => {
+  return str.trim().split("\n").reverse().join("\n");
+};
 // 27. Write a JavaScript function that takes a string as an input and returns the string with all paragraphs sorted in alphabetical order.
+const sortParagraphStrAlphaOrder = (str = "hello baby.\nnew here. \n i am good") => {
+  return str
+    .trim()
+    .split("\n")
+    .map((n) => n.trim())
+    .sort((a, b) => a.localeCompare(b))
+    .join("\n");
+};
 // 28. Write a JavaScript function that takes a string as an input and returns the string with all paragraphs sorted in reverse alphabetical order.
+const sortParagraphStrRevAlphaOrder = (str = "hello baby.\nnew here. \n i am good") => {
+  return str
+    .trim()
+    .split("\n")
+    .map((n) => n.trim())
+    .sort((a, b) => b.localeCompare(a));
+};
 // 29. Write a JavaScript function that takes a string as an input and returns the string with all white spaces removed.
+const rmWhiteSpacesStr = (str = "hello world") => {
+  // return str.trim().split(' ').join('')
+  return str.replace(" ", "");
+};
 // 30. Write a JavaScript function that takes a string as an input and returns the string with all tabs removed.
+const tabsRemoveStr = (str = "hello\tworld") => {
+  // return str.trim().split('\t').map(t=>t.trim()).join(' ')
+  return str.replace("\t", " ");
+};
 // 31. Write a JavaScript function that takes a string as an input and returns the string with all new lines removed.
 // 32. Write a JavaScript function that takes a string as an input and returns the string with all form feeds removed.
 // 33. Write a JavaScript function that takes a string as an input and returns the string with all carriage returns removed.
